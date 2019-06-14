@@ -1,0 +1,19 @@
+<div>
+  <aside>
+    <div>
+      <div>
+        <h3><%= @user.name %></h3>
+      </div>
+      <div>
+        <img src="<%= gravatar_url(@user, { size: 500 }) %>" alt="">
+      </div>
+    </div>
+  </aside>
+  <div>
+    <ul>
+      <li><a href="#" class="nav-link">Tasklist</a></li>
+      <li><a href="#" class="nav-link">Followings</a></li>
+      <li><a href="#" class="nav-link">Followers</a></li>
+    </ul>
+  </div>
+</div>
