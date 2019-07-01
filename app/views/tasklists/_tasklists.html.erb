@@ -1,0 +1,10 @@
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+        <div>
+          <p><%= task.content %></p>
+        </div>
+        <li><%= link_to task.id, task %> : <%= task.status %></li>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,16 @@
+<%= render 'layouts/navbar' %>
+<% if logged_in? %>
+  <div>
+    <aside>
+      <%= render 'tasks/form', task: @task %>
+    </aside>
+    <div><%= render 'tasklists/tasklists', task: @tasks %></div>
+  </div>
+<% else %>
+  <div>
+    <div>
+      <h1>Welcome to the Tasklist</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+<% end %>
