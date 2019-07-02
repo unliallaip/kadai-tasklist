@@ -2,6 +2,6 @@
   <ul>
     <li><%= task.content %></li>
     <li><%= link_to task.id, task %> : <%= task.status %></li>
-    <li><%= link_to "#{task.id}を削除", task, method: :delete %></li>
+    <li><%= link_to "#{task.id}を削除", task, method: :delete, data: {confirm: "削除してもよろしいですか？"} %></li>
   </ul>
 <% end %>

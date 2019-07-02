@@ -18,7 +18,9 @@ before_action :require_user_logged_in, only: [:index, :show]
     
     if @user.save
       flash[:success] = 'ユーザーの登録が完了しました'
-      redirect_to @user
+      # redirect_to @userはUsersControllerのshowアクションを示す
+      # loginページに飛ばす場合には以下のようになる。
+      redirect_to login_url
     else
       flash.now[:danger] = 'ユーザーの登録に失敗しました'
       render :new
